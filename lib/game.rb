@@ -52,7 +52,6 @@ class Game
 		# user draws a card
 		if (user_choice == "H")
 			@user.draw
-
 		# any choice but (S)tand repeats the round
 		elsif (user_choice != "S")
 			puts "\nPlease make a choice."
