@@ -23,7 +23,7 @@ class Player
 	def draw
 		# add card to hand and re-total
 		@hand << @deck.draw_card
-
+		
 		# re-total hand for new card
 		count_hand
 	end

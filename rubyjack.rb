@@ -14,7 +14,7 @@
 # USAGE: ruby rubyjack.rb "User Name"
 # 
 # Project demonstrates
-# - local, instance, and global variables
+# - local and instance variables
 # - arrays, hashes, and custom object type(s)
 # - logical conditions
 # - branching via both if/elsif/else and case/when

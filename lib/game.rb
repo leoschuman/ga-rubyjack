@@ -5,18 +5,17 @@ require "lib/dealer"
 class Game
 	
 	# assign default user name if no name passed from command line
-	def initialize(name)
+	def initialize(name="Stranger")
 		# if no name passed from command line, name is nil, so assign default name
-		if name.kind_of?(NilClass) then name = "Stranger" end
+		# if name.kind_of?(NilClass) then name = "Stranger" end
 		
-		# create new Deck object, which initializes deck
-		# global variable used for simplicity vs. singleton pattern
-		$deck = Deck.new
+		# create new Deck object, and assign to instance variable
+		@deck = Deck.new
 
-		# create user and dealer objects, setting their name, reference to global deck
-		# and initial hand size
-		@user = User.new(name, $deck, 2)
-		@dealer = Dealer.new("Dealer", $deck, 2)
+		# create user and dealer objects, setting their name, passing them a reference
+		# to the shared deck, and setting their hand size
+		@user = User.new(name, @deck, 2)
+		@dealer = Dealer.new("Dealer", @deck, 2)
 
 		# set game state flag and reason string
 		@game_over = false
