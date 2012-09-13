@@ -39,6 +39,7 @@ require "lib/game"
 
 # pass first command line argument - User's name - to new Game object
 name = ARGV[0]
+
 loop do
 	game = Game.new(name)
 	puts "\n(Q)uit or (C)ontinue?"

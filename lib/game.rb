@@ -5,7 +5,9 @@ require "lib/dealer"
 class Game
 	
 	# assign default user name if no name passed from command line
-	def initialize(name="Stranger")
+	def initialize(name)
+		# if no name passed from command line, name is nil, so assign default name
+		if name.kind_of?(NilClass) then name = "Stranger" end
 		
 		# create new Deck object, which initializes deck
 		# global variable used for simplicity vs. singleton pattern
