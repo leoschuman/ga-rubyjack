@@ -31,10 +31,10 @@ puts "----"
 require 'lib/player'
 
 $deck = Deck.new
-player = Player.new("Leo")
+player = Player.new("Leo", $deck, 2)
 player.show_hand
 puts player.total
 puts "hit!"
-player.hit!
+player.draw
 player.show_hand
 puts player.total
