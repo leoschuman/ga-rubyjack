@@ -7,7 +7,7 @@ class Game
 	# assign default user name if no name passed from command line
 	def initialize(name="Stranger")
 		# if no name passed from command line, name is nil, so assign default name
-		# if name.kind_of?(NilClass) then name = "Stranger" end
+		unless name.kind_of?(String) then name = "Stranger" end
 		
 		# create new Deck object, and assign to instance variable
 		@deck = Deck.new
