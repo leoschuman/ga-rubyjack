@@ -1,3 +1,5 @@
+
+# require code for Deck, User, and Dealer classes
 require "lib/deck"
 require "lib/user"
 require "lib/dealer"
@@ -5,10 +7,7 @@ require "lib/dealer"
 class Game
 	
 	# assign default user name if no name passed from command line
-	def initialize(name="Stranger")
-		# if no name passed from command line, name is nil, so assign default name
-		unless name.kind_of?(String) then name = "Stranger" end
-		
+	def initialize(name)		
 		# create new Deck object, and assign to instance variable
 		@deck = Deck.new
 

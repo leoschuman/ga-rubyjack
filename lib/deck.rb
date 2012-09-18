@@ -1,3 +1,5 @@
+
+# require Card class and Shuffleable module to be created or included in Deck
 require 'lib/card'
 require 'lib/shuffleable'
 
